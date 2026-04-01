@@ -22,6 +22,7 @@ func Info(dataset []string, dp DataParser) {
 		text, err := dp.ActionInfo()
 		if err != nil {
 			log.Println(err)
+			continue
 		}
 		fmt.Println(text)
 	}

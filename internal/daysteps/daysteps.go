@@ -25,7 +25,7 @@ func (ds *DaySteps) Parse(datastring string) (err error) {
 
 	step, err := strconv.Atoi(temp[0])
 	if err != nil {
-		return err
+		return fmt.Errorf("invalid steps format: %w", err)
 	}
 	if step <= 0 {
 		return fmt.Errorf("Введенные данные некорректны. Проверьте ввод.")
